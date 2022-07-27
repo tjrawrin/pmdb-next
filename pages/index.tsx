@@ -1,21 +1,14 @@
-import { trpc } from "../utils/trpc";
+import type { NextPage } from "next";
+import Layout from "../components/layout";
 
-export default function IndexPage() {
-  const hello = trpc.useQuery(["hello", { text: "client" }]);
-  if (!hello.data) {
-    return <div>Loading...</div>;
-  }
+const Home: NextPage = () => {
   return (
-    <div>
-      <p>{hello.data.greeting}</p>
-    </div>
+    <Layout>
+      <h2 className="text-center">
+        Select an option above to view available movies.
+      </h2>
+    </Layout>
   );
-}
+};
 
-// import type { NextPage } from "next";
-
-// const Home: NextPage = () => {
-//   return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-// };
-
-// export default Home;
+export default Home;
