@@ -15,7 +15,7 @@ export const appRouter = trpc.router().query("movies.getMovies", {
       };
     }
 
-    if (input?.option === "%23") {
+    if (input?.option === "#") {
       const filteredMovies = data.movies.filter((movie) => {
         return ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(
           movie.title[0].toLowerCase()
