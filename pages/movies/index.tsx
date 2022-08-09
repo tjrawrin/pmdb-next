@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { trpc } from "../utils/trpc";
+import { trpc } from "../../utils/trpc";
 import type { NextPage } from "next";
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 
 const Movies: NextPage = () => {
   const router = useRouter();

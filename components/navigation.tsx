@@ -39,11 +39,16 @@ const Navigation: React.FC = () => {
           href={{ pathname: "/movies", query: { view: `${option}` } }}
           key={index}
         >
-          <a className="bg-blue-600 text-white text-xs leading-tight uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
+          <a className="bg-blue-600 text-white uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
             {option}
           </a>
         </Link>
       ))}
+      <Link href="/movies/random">
+        <a className="bg-blue-600 text-white uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
+          ?
+        </a>
+      </Link>
     </nav>
   );
 };
