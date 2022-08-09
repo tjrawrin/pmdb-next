@@ -6,10 +6,10 @@ import Layout from "../../components/layout";
 
 const Movies: NextPage = () => {
   const router = useRouter();
-  const { isLoading, error, data } = trpc.useQuery([
-    "movies.getMovies",
-    { option: `${router.query.view}` },
-  ]);
+  const { isLoading, error, data } = trpc.useQuery(
+    ["movies.getMovies", { option: `${router.query.view}` }],
+    { refetchOnWindowFocus: false }
+  );
   const [userQuery, setUserQuery] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(data?.results);
 

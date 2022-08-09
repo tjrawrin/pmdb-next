@@ -3,9 +3,10 @@ import type { NextPage } from "next";
 import Layout from "../../components/layout";
 
 const Random: NextPage = () => {
-  const { isLoading, error, data, refetch } = trpc.useQuery([
-    "movies.getRandomMovie",
-  ]);
+  const { isLoading, error, data, refetch } = trpc.useQuery(
+    ["movies.getRandomMovie"],
+    { refetchOnWindowFocus: false }
+  );
 
   if (isLoading) {
     return (
