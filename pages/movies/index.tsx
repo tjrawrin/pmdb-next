@@ -60,7 +60,7 @@ const Movies: NextPage = () => {
       />
       <h2 className="text-2xl mb-6 border-b-2">
         {data?.option.toUpperCase()}
-        <span className="text-sm">{`Showing ${data?.results.length} results.`}</span>
+        <span className="text-sm" style={{paddingLeft: '16px'}}>{`Showing ${data?.results.length} results.`}</span>
       </h2>
       {filteredMovies && filteredMovies.length > 0 ? (
         <ul>
