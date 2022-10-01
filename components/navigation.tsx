@@ -1,4 +1,5 @@
 import Link from "next/link";
+const [setUserQuery] = useState("");
 
 const options = [
   "all",
@@ -31,6 +32,10 @@ const options = [
   "z",
 ];
 
+const clearUserQuery = () => {
+  setUserQuery("");
+}
+
 const Navigation: React.FC = () => {
   return (
     <nav className="flex flex-wrap justify-center gap-2 mb-6">
@@ -38,13 +43,17 @@ const Navigation: React.FC = () => {
         <Link
           href={{ pathname: "/movies", query: { view: `${option}` } }}
           key={index}
+          onclick={clearUserQuery}
         >
           <a className="bg-blue-600 text-white uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none ring-blue-600/50 focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
             {option}
           </a>
         </Link>
       ))}
-      <Link href="/movies/random">
+      <Link
+        href="/movies/random"
+        onclick={clearUserQuery}
+      >
         <a className="bg-blue-600 text-white uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none ring-blue-600/50 focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
           ?
         </a>
