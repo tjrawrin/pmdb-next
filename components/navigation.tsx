@@ -1,5 +1,4 @@
 import Link from "next/link";
-const [setUserQuery] = useState("");
 
 const options = [
   "all",
@@ -32,11 +31,12 @@ const options = [
   "z",
 ];
 
-const clearUserQuery = () => {
-  setUserQuery("");
-}
-
 const Navigation: React.FC = () => {
+  const [userQuery, setUserQuery] = useState("");
+  const clearUserQuery = () => {
+    setUserQuery("");
+  }
+
   return (
     <nav className="flex flex-wrap justify-center gap-2 mb-6">
       {options.map((option, index) => (
