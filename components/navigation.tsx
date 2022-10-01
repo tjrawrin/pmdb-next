@@ -44,7 +44,7 @@ const Navigation: React.FC = () => {
         <Link
           href={{ pathname: "/movies", query: { view: `${option}` } }}
           key={index}
-          onclick={clearUserQuery}
+          onClick={clearUserQuery}
         >
           <a className="bg-blue-600 text-white uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none ring-blue-600/50 focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
             {option}
@@ -53,7 +53,7 @@ const Navigation: React.FC = () => {
       ))}
       <Link
         href="/movies/random"
-        onclick={clearUserQuery}
+        onClick={clearUserQuery}
       >
         <a className="bg-blue-600 text-white uppercase rounded shadow hover:bg-blue-700 focus:bg-blue-700 focus:outline-none ring-blue-600/50 focus:ring-2 active:bg-blue-800 transition duration-150 ease-in-out w-8 h-8 flex justify-center items-center">
           ?
