@@ -58,7 +58,10 @@ const Movies: NextPage = () => {
         onChange={filter}
         value={userQuery}
       />
-      <h2 className="text-2xl mb-6 border-b-2">{data?.option.toUpperCase()}</h2>
+      <h2 className="text-2xl mb-6 border-b-2">
+        {data?.option.toUpperCase()}
+        <span class="text-sm">{`Showing ${data?.results.length} results.`}</span>
+      </h2>
       {filteredMovies && filteredMovies.length > 0 ? (
         <ul>
           {filteredMovies.map((result, index) => (
