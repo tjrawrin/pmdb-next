@@ -38,7 +38,7 @@ const Navigation: React.FC = () => {
     setUserQuery("");
     const searchbox = document.querySelector('#search-box');
     if(searchbox) {
-        searchbox?.value = "";
+        searchbox.value = "";
     }
   }
 
