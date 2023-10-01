@@ -36,6 +36,8 @@ const Navigation: React.FC = () => {
   const [userQuery, setUserQuery] = useState("");
   const clearUserQuery = () => {
     setUserQuery("");
+    const searchbox = document.querySelector('#search-box');
+    searchbox.value = "";
   }
 
   return (
