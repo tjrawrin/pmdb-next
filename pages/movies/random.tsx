@@ -38,7 +38,7 @@ const Random: NextPage = () => {
           className="bg-green-600 text-white rounded shadow hover:bg-green-700 focus:bg-green-700 focus:outline-none ring-green-600/50 focus:ring-2 active:bg-green-800 transition duration-150 ease-in-out p-2 flex justify-center items-center"
           onClick={() => refetch()}
         >
-          &#8635; Next Random Movie
+          &#8635; Try again!
         </button>
       </div>
     </Layout>
