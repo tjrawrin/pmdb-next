@@ -51,11 +51,12 @@ const Movies: NextPage = () => {
   return (
     <Layout>
       <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none leading-tight focus:ring-2 focus:shadow-none transition duration-150 ease-in-out mb-6"
-        type="search"
-        placeholder={`Search ${data?.option.toUpperCase()} movies...`}
         autoComplete="off"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none leading-tight focus:ring-2 focus:shadow-none transition duration-150 ease-in-out mb-6"
+        id="search-box"
         onChange={filter}
+        placeholder={`Search ${data?.option.toUpperCase()} movies...`}
+        type="search"
         value={userQuery}
       />
       <h2 className="text-2xl mb-6 border-b-2">
